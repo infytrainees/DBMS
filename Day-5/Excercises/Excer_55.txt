@@ -1,0 +1,3 @@
+select  e.id, e.ename, e.dept, c.model
+from employee e full join computer c
+on e.compid = c.compid

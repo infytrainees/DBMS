@@ -1,0 +1,6 @@
+SELECT prodid, category, pdesc, price
+FROM product p1 WHERE price IN 
+(
+SELECT MAX(price) FROM product p2 
+WHERE p1.category = p2.category
+)

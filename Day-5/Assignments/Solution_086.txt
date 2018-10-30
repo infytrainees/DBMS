@@ -1,0 +1,6 @@
+SELECT ro.roid,
+count(i.QTYONHAND) AS "Number of items"
+FROM item i, retailstock ro
+WHERE ro.itemcode = i.itemcode
+GROUP BY ro.roid
+

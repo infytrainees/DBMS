@@ -1,0 +1,3 @@
+select e.ename, e.dept, NVL(c.model,'Not allocated' ) as model
+from employee e left join computer c
+on e.compid = c.compid

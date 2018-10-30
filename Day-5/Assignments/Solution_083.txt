@@ -1,0 +1,6 @@
+SELECT 
+e2.EMPNAME,
+e2.designation,
+e2.emailid
+FROM empdetails e1 JOIN empdetails e2 ON e1.EMPNAME = 'George' AND e1.WORKSIN = e2.WORKSIN
+WHERE e2.EMPNAME != 'George'

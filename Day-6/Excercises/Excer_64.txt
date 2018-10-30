@@ -1,0 +1,3 @@
+SELECT sname FROM salesman sl
+WHERE sl.sid NOT IN
+(SELECT sid FROM sale s)

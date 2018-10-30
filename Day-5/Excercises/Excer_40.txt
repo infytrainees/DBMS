@@ -1,0 +1,3 @@
+SELECT sid, sname, location FROM salesman WHERE location LIKE '%o%'AND sname LIKE '%e%'
+UNION ALL
+SELECT sid, sname, location FROM salesman WHERE location LIKE '%a%' AND sname LIKE '%a%'

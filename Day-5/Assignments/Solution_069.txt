@@ -1,0 +1,5 @@
+select
+d.dname
+from emp e,dept d
+where e.deptno = d.deptno and e.sal > 1500
+group by d.dname

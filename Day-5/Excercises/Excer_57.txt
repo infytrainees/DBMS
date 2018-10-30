@@ -1,0 +1,3 @@
+select sid, sname from salesman
+where sid not in 
+(select sid from sale)

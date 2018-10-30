@@ -1,0 +1,3 @@
+select sd.saleid, sd.prodid, s.sid, slm.sname
+from salesman slm, product p, sale s, saledetail sd
+where sd.saleid = s.saleid and sd.prodid = p.prodid and s.sid = slm.si

@@ -1,0 +1,5 @@
+SELECT i.itemcode, 
+i.descr,
+NVL(TO_CHAR(rs.qtyavailable),'N.A.') AS qtyavailable
+FROM item i LEFT JOIN retailstock rs ON i.itemcode = rs.itemcode
+AND rs.ROID = 'R1001'

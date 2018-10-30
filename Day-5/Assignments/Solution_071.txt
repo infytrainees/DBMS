@@ -1,0 +1,6 @@
+SELECT 
+i.itemcode,
+i.descr,
+q.sname
+FROM quotation q,item i
+WHERE q.itemcode = i.itemcode

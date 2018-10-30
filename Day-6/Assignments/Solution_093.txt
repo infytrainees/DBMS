@@ -1,0 +1,3 @@
+SELECT DISTINCT i.itemcode, i.itemtype, i.descr, i.category
+FROM item i , purchasebill pb
+WHERE i.itemcode = pb.itemcode

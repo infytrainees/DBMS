@@ -1,0 +1,7 @@
+SELECT
+rs.roid,
+i.descr,
+i.itemtype,
+rs.unitprice
+FROM retailstock rs, item i
+WHERE rs.itemcode = i.itemcode AND rs.unitprice > 1500

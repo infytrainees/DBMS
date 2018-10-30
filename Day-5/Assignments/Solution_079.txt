@@ -1,0 +1,7 @@
+SELECT ro.location,
+c.CUSTTYPE,
+SUM(pb.QUANTITY) AS totalquantity
+FROM item i, customer c, retailoutlet ro, purchasebill pb
+WHERE ro.roid = pb.ROID AND pb.CUSTID = c.custid AND pb.itemcode = i.itemcode AND c.gender = 'M'
+AND i.ITEMTYPE IN ('Apparels','Computer')
+GROUP BY ro.location,c.CUSTTYPE

@@ -1,0 +1,3 @@
+select p1.prodid,p1.category,p1.price
+from product p1, product p2
+where p1.price = p2.price and p1.prodid != p2.prodid

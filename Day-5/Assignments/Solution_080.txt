@@ -1,0 +1,6 @@
+SELECT i.itemcode, 
+i.descr,
+NVL(pb.BILLAMOUNT,0) AS billamount,
+NVL(pb.custid,0) AS custid
+FROM item i LEFT JOIN purchasebill pb ON pb.itemcode = i.itemcode 
+WHERE i.ITEMTYPE = 'FMCG'

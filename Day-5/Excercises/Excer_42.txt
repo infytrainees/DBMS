@@ -1,0 +1,3 @@
+select prodid,pdesc,category,discount from product where discount < 10
+union
+select prodid,pdesc,category,discount from product where category = 'Sports'

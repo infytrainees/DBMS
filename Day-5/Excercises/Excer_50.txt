@@ -1,0 +1,6 @@
+select slm.sid, slm.sname, sum(p.price*sd.quantity) as tamount, sum((p.price*sd.quantity)*(p.discount/100)) as tdiscount
+from salesman slm, product p, sale s, saledetail sd
+where slm.sid = s.sid and sd.saleid = s.saleid and p.prodid = sd.prodid
+
+group by  slm.sid,slm.sname
+order by tdiscount desc, tamount desc

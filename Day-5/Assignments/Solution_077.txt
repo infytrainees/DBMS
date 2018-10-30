@@ -1,0 +1,4 @@
+SELECT q.sname,
+q.quotationid
+FROM quotation q,orders o
+WHERE q.QUOTATIONID = o.QUOTATIONID AND (o.DELIVEREDDATE - o.orderdate) <= 5

@@ -1,0 +1,6 @@
+SELECT sname FROM salesman sl
+WHERE sl.sid = 
+(SELECT sid FROM sale s
+WHERE s.sldate LIKE '%JUN-15'
+group by sid
+having count(sid) >=1)

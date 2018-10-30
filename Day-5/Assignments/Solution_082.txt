@@ -1,0 +1,5 @@
+SELECT emp.empid,
+emp.EMPNAME,
+ro.ROID,
+ro.LOCATION
+FROM empdetails emp RIGHT JOIN retailoutlet ro ON ro.roid = emp.WORKSIN

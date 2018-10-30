@@ -1,0 +1,5 @@
+SELECT 
+e.ename,
+v.vehiclename
+FROM empvehicle ev JOIN vehicle v ON ev.vehicleid = v.vehicleid 
+RIGHT JOIN emp e ON ev.empno = e.empno

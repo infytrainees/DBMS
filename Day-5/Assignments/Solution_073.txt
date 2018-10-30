@@ -1,0 +1,7 @@
+SELECT
+i.itemcode,
+i.descr,
+i.category,
+q.quotedprice
+FROM item i,quotation q
+WHERE q.itemcode = i.itemcode AND q.qstatus = 'Accepted'

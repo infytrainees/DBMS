@@ -1,0 +1,2 @@
+select sname from salesman where sid in
+(select sid from sale group by sid having count(sid) >= 2)

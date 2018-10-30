@@ -1,0 +1,7 @@
+SELECT
+i.itemcode,
+i.descr
+FROM item i, quotation qt
+WHERE i.itemcode = qt.itemcode AND i.price = qt.quotedprice
+GROUP BY i.itemcode,i.DESCR
+HAVING count(i.itemcode) > 1

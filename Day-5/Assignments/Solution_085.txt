@@ -1,0 +1,4 @@
+SELECT c.CUSTNAME,
+pb.billamount
+FROM purchasebill pb, customer c
+WHERE pb.CUSTID = c.custid AND pb.BILLAMOUNT > 5000

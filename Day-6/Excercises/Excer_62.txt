@@ -1,0 +1,17 @@
+SELECT sm.sid, sm.sname, sm.location 
+FROM salesman sm, sale s
+	WHERE sm.sid = s.sid
+		AND s.saleid IN 
+(
+SELECT sd.saleid  
+FROM product p,saledetail sd
+	WHERE p.prodid = sd.prodid
+		GROUP BY sd.saleid 
+		HAVING sum(p.price*sd.quantity*(1-(p.discount/100))) >
+(
+select avg(sum(p.price*sd.quantity*(1-(p.discount/100))))
+FROM product p,saledetail sd
+	WHERE p.prodid = sd.prodid
+		GROUP BY sd.prodid
+)
+)

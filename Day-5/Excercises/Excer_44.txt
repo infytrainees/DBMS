@@ -1,0 +1,3 @@
+select emp.id as id,emp.ename as ename,emp.dept as dept, comp.compid as compid,comp.make as make
+from employee emp, computer comp
+where emp.compid = comp.compid

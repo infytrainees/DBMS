@@ -1,0 +1,7 @@
+
+DELETE FROM empvehicle where empno IN    
+(
+SELECT empno FROM emp WHERE sal in
+(SELECT max(sal) FROM emp
+GROUP BY deptno )
+)

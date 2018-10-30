@@ -1,0 +1,10 @@
+SELECT 
+slm.sid,
+slm.sname,
+NVL(SUM(p.price * sd.quantity),0) AS tamount, 
+NVL(SUM(p.price * sd.quantity*p.discount/100),0) AS tdiscount
+
+FROM salesman slm LEFT JOIN sale s ON  s.sid = slm.sid 
+left JOIN saledetail sd ON sd.saleid = s.saleid 
+left JOIN product p ON sd.prodid = p.prodid  
+GROUP BY slm.sid,slm.sname

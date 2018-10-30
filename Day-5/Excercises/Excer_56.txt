@@ -1,0 +1,8 @@
+select  e.id, 
+e.ename, 
+m.id as mgrid,
+m.ename as mgrname, 
+ce.model as e_model, 
+cm.model M_model
+from employee e, computer ce, computer cm, employee m
+where e.compid = ce.compid and e.manager = m.id and m.compid = cm.compid

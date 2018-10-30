@@ -1,0 +1,3 @@
+select s.saleid, s.sldate
+from salesman sm, sale s
+where  sm.location = 'London' and sm.sid = s.sid 

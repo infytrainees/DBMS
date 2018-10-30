@@ -1,0 +1,3 @@
+select s1.sid,s1.sname,s1.location
+from salesman s1, salesman s2
+where s1.location = s2.location and s1.sid != s2.sid

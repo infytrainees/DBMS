@@ -1,0 +1,7 @@
+SELECT e2.empno, e2.ename FROM emp e2
+WHERE e2.sal >
+(
+SELECT avg(sal) FROM emp e1
+WHERE e1.deptno = e2.deptno
+GROUP BY deptno 
+)

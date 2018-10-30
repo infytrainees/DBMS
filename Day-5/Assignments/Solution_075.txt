@@ -1,0 +1,8 @@
+SELECT 
+i.ITEMCODE AS itemcode,
+qt.SNAME AS sname,
+SUM (o.qtyordered) AS totalquantity
+FROM orders o, quotation qt, item i
+WHERE o.quotationid = qt.quotationid AND qt.itemcode = i.itemcode 
+GROUP BY i.ITEMCODE, qt.SNAME
+HAVING SUM(o.qtyordered) >= 100

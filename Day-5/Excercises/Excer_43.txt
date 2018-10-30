@@ -1,0 +1,3 @@
+select 'S' as type, sid as id, sname as details from salesman
+union all
+select 'P' as type, prodid as id, category as details from product

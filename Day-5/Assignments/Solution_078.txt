@@ -1,0 +1,8 @@
+SELECT 
+NVL(e.empname,'No Manager') AS empname,
+i.category,
+sum(rs.qtyavailable) AS totalquantity 
+FROM empdetails e RIGHT JOIN retailoutlet r ON r.managerid = e.empid 
+JOIN retailstock rs ON r.roid = rs.roid 
+JOIN item i ON rs.itemcode = i.itemcode
+GROUP BY e.empname,i.CATEGORY

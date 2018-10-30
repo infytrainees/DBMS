@@ -1,0 +1,14 @@
+SELECT sm.sid,sm.sname,sm.location 
+	FROM salesman sm, sale s,saledetail sd ,product p  
+		WHERE sm.sid=s.sid AND s.saleid=sd.saleid AND p.prodid=sd.prodid 
+			GROUP BY sm.sid,sm.sname,sm.location
+			HAVING sum(price*quantity*(1-discount/100))>
+(
+SELECT avg(sum(price*quantity*(1-discount/100))) 
+	FROM sale s1, saledetail sd1, product p1, salesman sm1
+		WHERE s1.saleid=sd1.saleid 
+			AND p1.prodid=sd1.prodid 
+			AND s1.sid=sm1.sid 
+			AND sm.location=sm1.location 
+				GROUP BY s1.sid
+)

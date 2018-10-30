@@ -1,0 +1,8 @@
+SELECT 
+slm.location,
+p.category,
+sum(sd.quantity) as "Total Quantity"
+
+FROM salesman slm , sale s ,saledetail sd , product p
+where s.sid = slm.sid and sd.saleid = s.saleid and sd.prodid = p.prodid 
+group by slm.location, p.category

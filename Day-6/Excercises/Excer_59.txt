@@ -1,0 +1,3 @@
+SELECT saleid, sldate FROM sale
+WHERE sldate =
+(SELECT MAX(sldate) FROM sale)
