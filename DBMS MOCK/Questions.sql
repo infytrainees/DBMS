@@ -1,6 +1,6 @@
-drop table gift
-drop table customer1
-drop table giftorder
+drop table gift;
+drop table customer1;
+drop table giftorder;
 
 create table gift(
 giftid varchar2(5) PRIMARY KEY CHECK(giftid LIKE 'G%'),
