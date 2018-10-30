@@ -1,0 +1,5 @@
+SELECT itemtype, category, round(avg(price),2) AS "Average item price"
+FROM item
+WHERE itemtype = 'Computer' OR itemtype = 'FMCG'
+GROUP BY itemtype, category
+HAVING avg(price) < 2000

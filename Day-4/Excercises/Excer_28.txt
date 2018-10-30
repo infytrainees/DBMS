@@ -1,0 +1,2 @@
+select prodid, category, discount from product where category in ('Sports','Apparel') 
+order by category, discount

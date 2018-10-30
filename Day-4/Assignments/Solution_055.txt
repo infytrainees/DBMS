@@ -1,0 +1,2 @@
+SELECT orderid, status, NVL(pymtmode,'Payment yet not done') as pymtmode
+FROM orders

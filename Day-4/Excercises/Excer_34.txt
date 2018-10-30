@@ -1,0 +1,1 @@
+select sname||' is from '||location as result from salesman	

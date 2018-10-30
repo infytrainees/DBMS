@@ -1,0 +1,2 @@
+select to_char(sysdate,'Mon/DD/YYYY Day') as currentdate
+from dual

@@ -1,0 +1,2 @@
+select count(sid) as sale_count from sale
+where sldate between add_months(sysdate,-40) and sysdate

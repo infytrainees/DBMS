@@ -1,0 +1,1 @@
+SELECT  count(itemcode) AS NOOFITEMS FROM item

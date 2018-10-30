@@ -1,0 +1,2 @@
+SELECT orderid, pymtdate-orderdate AS NOOFDAYS
+FROM orders

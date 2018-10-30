@@ -1,0 +1,5 @@
+SELECT job, deptno, avg(sal) AS avgsalary
+FROM emp
+WHERE deptno IN (10,20) AND sal >2000
+GROUP BY job,deptno
+HAVING avg(sal) > 2500

@@ -1,0 +1,4 @@
+SELECT orderid, 
+ROUND(months_between(pymtdate, orderdate),2) AS "No of Months"
+FROM orders 
+WHERE months_between(pymtdate, orderdate) > 0.1 

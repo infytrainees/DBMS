@@ -1,0 +1,5 @@
+SELECT sname, avg(quotedprice) as "Average quoted price"
+FROM quotation
+WHERE quotedprice > 1000 AND qstatus = 'Closed'
+GROUP BY sname
+HAVING avg(quotedprice) < 4500

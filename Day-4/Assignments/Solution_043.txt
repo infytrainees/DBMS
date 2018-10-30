@@ -1,0 +1,7 @@
+SELECT
+empid,
+salary as "Current Salary",
+salary*1.20 as "New Salary",
+salary*0.20 as "Incremented Amount"
+FROM empdetails
+where designation = 'Manager'

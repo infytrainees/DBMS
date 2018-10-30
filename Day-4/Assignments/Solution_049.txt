@@ -1,0 +1,5 @@
+SELECT job, avg(sal) AS "Average Salary"
+FROM emp
+WHERE job = 'MANAGER' OR job = 'ANALYST'
+GROUP BY job
+HAVING avg(sal) > 1500

@@ -1,0 +1,2 @@
+select itemtype, descr ,price from item 
+where price > 4000

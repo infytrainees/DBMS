@@ -1,0 +1,2 @@
+SELECT count(status) AS TOTALORDERSCOUNT, count(pymtmode) AS PAIDORDERSCOUNT
+FROM orders 

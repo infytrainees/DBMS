@@ -1,0 +1,6 @@
+SELECT 
+To_CHAR(sldate,'Month') AS MONTH,
+count(To_CHAR(sldate,'Month')) as Number_sale
+FROM SALE
+GROUP BY To_CHAR(sldate,'Month')
+ORDER BY COUNT(To_CHAR(sldate,'Month')) desc

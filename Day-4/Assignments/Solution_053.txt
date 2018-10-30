@@ -1,0 +1,3 @@
+SELECT itemcode, price AS "Old Price", ROUND(price * 0.745,2) AS "New Price"
+FROM item
+WHERE itemtype = 'FMCG'

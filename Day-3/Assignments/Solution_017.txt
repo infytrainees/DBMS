@@ -1,0 +1,1 @@
+insert into store values ('Loyal World','Infy Campus, Mysore','Rohan Kumar')

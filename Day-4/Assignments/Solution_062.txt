@@ -1,0 +1,2 @@
+SELECT max (salary) AS maxsal, min(salary) AS minsal, sum(salary) AS totalsal, avg(salary) AS avgsal
+FROM empdetails

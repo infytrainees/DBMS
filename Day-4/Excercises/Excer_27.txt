@@ -1,0 +1,2 @@
+select prodid, category, price, discount from product 
+order by category desc, price 

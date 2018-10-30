@@ -1,0 +1,3 @@
+select prodid,pdesc,price 
+from product
+order by price desc,prodid desc

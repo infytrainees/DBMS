@@ -1,0 +1,2 @@
+SELECT count (DISTINCT itemtype) AS NOOFITEMTYPES
+FROM item

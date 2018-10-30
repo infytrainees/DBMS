@@ -1,0 +1,3 @@
+select descr 
+from item
+where length(descr) > 15

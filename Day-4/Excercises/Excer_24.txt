@@ -1,0 +1,2 @@
+select prodid, substr(pdesc,1,5) as pdesc_five, category 
+from product 

@@ -1,0 +1,5 @@
+select prodid,sum(quantity) as QTY_sold
+from Saledetail 
+where quantity > 1 
+group by prodid
+having count(prodid)>1

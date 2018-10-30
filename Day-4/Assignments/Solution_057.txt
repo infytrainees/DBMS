@@ -1,0 +1,2 @@
+select substr(roid,2) as NUMERICROID
+from retailoutlet

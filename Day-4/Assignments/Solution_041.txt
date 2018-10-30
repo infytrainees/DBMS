@@ -1,0 +1,5 @@
+SELECT 
+To_CHAR(qdate,'Month') AS MONTH, 
+COUNT(To_CHAR(qdate,'Month')) AS QUOTATIONCOUNT 
+FROM quotation 
+GROUP BY To_CHAR(qdate,'Month')

@@ -1,0 +1,2 @@
+select location,count(location) as number_sman from salesman
+group by location
