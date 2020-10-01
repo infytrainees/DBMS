@@ -8,4 +8,4 @@ Deleting from Table
 Drop Table
 Altering Table
 
-writing queries to get req result from given tabular Da
+writing queries to get req result from given tabular Data
